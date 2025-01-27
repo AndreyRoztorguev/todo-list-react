@@ -13,11 +13,13 @@ const TodoItem = ({ todo, editTodoHandler, deleteTodoHandler }: TodoItemProps) =
     <span className="text-gray-800">{todo.value}</span>
     <div>
       <Button
+        name="Edit Todo"
         handleClick={() => editTodoHandler({ ...todo })}
         className="w-5 text-blue-500 hover:text-blue-600 focus:outline-none">
         <FaEdit />
       </Button>
       <Button
+        name="Delete Todo"
         className="w-4 text-red-500 hover:text-red-600 focus:outline-none"
         handleClick={() => deleteTodoHandler(todo.id)}>
         <FaTrash />

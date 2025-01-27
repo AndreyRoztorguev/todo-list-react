@@ -1,12 +1,13 @@
 import { ReactNode } from "react";
 
 type ButtonProps = {
+  name?: string;
   children: ReactNode;
-  className: string;
+  className?: string;
   handleClick: () => void;
 };
-const Button = ({ handleClick, children, className }: ButtonProps) => (
-  <button onClick={handleClick} className={className}>
+const Button = ({ handleClick, children, className, name }: ButtonProps) => (
+  <button aria-label={name} name={name} onClick={handleClick} className={className}>
     {children}
   </button>
 );

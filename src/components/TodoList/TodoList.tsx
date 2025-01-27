@@ -8,7 +8,7 @@ type TodoListProps = {
 };
 
 const TodoList = ({ todos, deleteTodoHandler, editTodoHandler }: TodoListProps) => (
-  <ul className="space-y-3">
+  <ul aria-label="todo-list" className="space-y-3">
     {todos.map((todo) => (
       <TodoItem
         todo={todo}

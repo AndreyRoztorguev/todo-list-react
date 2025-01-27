@@ -1,9 +1,9 @@
 type TodoInputProps = {
   value: string;
   handleChange: (event: React.ChangeEvent<HTMLInputElement>) => void;
-  placeholder: string;
+  placeholder?: string;
 };
-const TodoInput = ({ handleChange, value, placeholder }: TodoInputProps) => (
+const TodoInput = ({ handleChange, value, placeholder = "Add new task here" }: TodoInputProps) => (
   <input
     onChange={handleChange}
     value={value}
